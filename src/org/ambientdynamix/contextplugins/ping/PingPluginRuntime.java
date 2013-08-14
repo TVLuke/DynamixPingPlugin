@@ -65,12 +65,14 @@ public class PingPluginRuntime extends AutoReactiveContextPluginRuntime
 	public void handleConfiguredContextRequest(UUID requestId, String contextInfoType, Bundle scanConfig) 
 	{
 		Date d = new Date();
-		Log.d(TAG, "received Request: "+d.getTime());
+		long x1 = d.getTime();
+		//Log.d(TAG, "received Request: "+x1);
 		String id = scanConfig.getString("id");
 		SecuredContextInfo aci= new SecuredContextInfo(new PingContextInfo(id), PrivacyRiskLevel.LOW);
 		sendContextEvent(requestId, aci);
 		d = new Date();
-		Log.d(TAG, "Send Context: "+d.getTime());
+		//Log.d(TAG, "Send Context: "+d.getTime());
+		Log.d(TAG, "time: "+(d.getTime()-x1)+ "ms");
 		context=this;
 	}
 
