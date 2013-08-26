@@ -105,7 +105,11 @@ public class PingContextInfo implements IContextInfo
 		}
 		else if (format.equalsIgnoreCase("XML"))
 		{
-			return "<ping>"+id+"</ping>";
+			return "<dynamixContext>" +
+					"    <contextType>" +
+					"    </contextType>"+					
+					"  <ping>"+id+"</ping>" +
+					"<dynamixContext/>";
 		}
 		else if (format.equalsIgnoreCase("JSON"))
 		{

@@ -19,6 +19,7 @@ package org.ambientdynamix.contextplugins.ping;
 import java.util.Date;
 import java.util.UUID;
 
+import org.ambientdynamix.api.application.IContextInfo;
 import org.ambientdynamix.api.contextplugin.*;
 import org.ambientdynamix.api.contextplugin.security.PrivacyRiskLevel;
 import org.ambientdynamix.api.contextplugin.security.SecuredContextInfo;
@@ -95,6 +96,8 @@ public class PingPluginRuntime extends AutoReactiveContextPluginRuntime
 		//Log.d(TAG, "received Request: "+x1);
 		String id = scanConfig.getString("id");
 		SecuredContextInfo aci= new SecuredContextInfo(new PingContextInfo(id), PrivacyRiskLevel.LOW);
+		IContextInfo xyz = aci.getContextInfo();
+		Log.d(TAG, xyz.getImplementingClassname());
 		sendContextEvent(requestId, aci);
 		d = new Date();
 		//Log.d(TAG, "Send Context: "+d.getTime());
