@@ -107,8 +107,11 @@ public class PingContextInfo implements IContextInfo
 		{
 			return "<dynamixContext>" +
 					"    <contextType>" +
-					"    </contextType>"+					
-					"  <ping>"+id+"</ping>" +
+					"        <contextTypeName>"+getContextType()+"</contextTypeName>"+
+					"    </contextType>"+
+					"    <contextData>"+
+					"    <createdAt>"+new Date().getTime()+"<createdAt>"+
+					"    <ping>"+id+"</ping>" +
 					"<dynamixContext/>";
 		}
 		else if (format.equalsIgnoreCase("JSON"))
