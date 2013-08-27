@@ -1,7 +1,19 @@
 #Ping Plugin
 This Plugin is designed to create a context event with a given String and return it as a ping.
 
-##Use
+Plugin ID: org.ambientdynamix.contextplugins.pingplugin
+
+###Supported Context Type
+<table>
+    <tr>
+        <td>Context Types</td><td>Privacy Risk Level</td><td>Data Types</td><td>Description</td>
+    </tr>
+    <tr>
+        <td>org.ambientdynamix.contextplugins.context.info.sample.ping</td><td>LOW</td><td>PingContextInfo</td><td>Returned Ping</td>
+    </tr>
+</table>
+
+###Use
 It only answers configured context requests with the parameters action_type = ping and id with a string to returned.
 
 ###Native App Usage
