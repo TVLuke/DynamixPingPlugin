@@ -94,14 +94,18 @@ public class PingPluginRuntime extends AutoReactiveContextPluginRuntime
 		Date d = new Date();
 		long x1 = d.getTime();
 		//Log.d(TAG, "received Request: "+x1);
-		String id = scanConfig.getString("id");
-		SecuredContextInfo aci= new SecuredContextInfo(new PingContextInfo(id), PrivacyRiskLevel.LOW);
-		IContextInfo xyz = aci.getContextInfo();
-		Log.d(TAG, xyz.getImplementingClassname());
-		sendContextEvent(requestId, aci);
-		d = new Date();
-		//Log.d(TAG, "Send Context: "+d.getTime());
-		Log.d(TAG, id+" - time: "+(d.getTime()-x1)+ "ms");
+		String at = scanConfig.getString("action_type");
+		if(at.equals("ping"))
+		{
+			String id = scanConfig.getString("id");
+			SecuredContextInfo aci= new SecuredContextInfo(new PingContextInfo(id), PrivacyRiskLevel.LOW);
+			IContextInfo xyz = aci.getContextInfo();
+			Log.d(TAG, xyz.getImplementingClassname());
+			sendContextEvent(requestId, aci);
+			d = new Date();
+			//Log.d(TAG, "Send Context: "+d.getTime());
+			Log.d(TAG, id+" - time: "+(d.getTime()-x1)+ "ms");
+		}
 		context=this;
 	}
 
