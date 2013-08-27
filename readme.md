@@ -1,11 +1,10 @@
-Use
-===
+#Ping Plugin
 This Plugin is designed to create a context event with a given String and return it as a ping.
 
+##Use
 It only answers configured context requests with the parameters action_type = ping and id with a string to returned.
 
-Native App Usage
-================
+###Native App Usage
 Add context support as follows:
 
 ```Java
@@ -20,9 +19,11 @@ scanconfig.putString("action_type", "ping");
 scanconfig.putString("id", "someString");
 dynamix.configuredContextRequest(dynamixCallback, "org.ambientdynamix.contextplugins.pingplugin", "org.ambientdynamix.contextplugins.context.info.sample.ping", scanConfig);
 ```    
+### Plug-in Data-type JAR
 
-Copyright
-=========
+[Download](https://github.com/TVLuke/DynamixPingPlugin/raw/master/dist/org.ambientdynamix.contextplugins.pingplugin_datatypes_1.0.0.jar "Ping jar")
+
+### Copyright
 
 Copyright (C) Institute of Telematics, Lukas Ruge
 
