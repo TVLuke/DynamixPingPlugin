@@ -37,6 +37,15 @@ dynamix.configuredContextRequest(dynamixCallback, "org.ambientdynamix.contextplu
 
 ### Copyright
 
+#### Kudos
+Plugin for the Ambient Dynamix Framework. You can find Ambient Dynamix at http://ambientdynamix.org
+
+Using the Dynamix Plugin Builder: https://bitbucket.org/ambientlabs/dynamix-plug-in-builder
+
+Using the Dynamix Context Library
+
+#### Copyright Notice
+
 Copyright (C) Institute of Telematics, Lukas Ruge
 
 Licensed under the Apache License, Version 2.0 (the "License");

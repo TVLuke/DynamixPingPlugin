@@ -16,11 +16,11 @@
 
 package org.ambientdynamix.contextplugins.ping;
 
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
 import org.ambientdynamix.api.application.IContextInfo;
+import org.ambientdynamix.contextplugins.context.info.sample.IPingContextInfo;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -33,7 +33,7 @@ import android.util.Log;
  * @author lukas
  *
  */
-public class PingContextInfo implements IContextInfo
+public class PingContextInfo implements IContextInfo, IPingContextInfo
 {
 
 	private final String TAG = "PINGPLUGIN";
@@ -110,6 +110,10 @@ public class PingContextInfo implements IContextInfo
 		{
 			return "ping: "+id;
 		}
+		else if (format.equalsIgnoreCase("JSON"))
+		{
+			return  "<ping>"+id+"</ping>";
+		}
 		else
 			return null;
 	}
@@ -121,6 +125,7 @@ public class PingContextInfo implements IContextInfo
 		formats.add("text/plain");
 		formats.add("XML");
 		formats.add("JSON");
+		formats.add("RDF+XML");
 		return formats;
 	}
 
