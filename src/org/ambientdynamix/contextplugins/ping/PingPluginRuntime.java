@@ -93,7 +93,7 @@ public class PingPluginRuntime extends AutoReactiveContextPluginRuntime
 	{
 		Date d = new Date();
 		long x1 = d.getTime();
-		//Log.d(TAG, "received Request: "+x1);
+		Log.d(TAG, "received Request: "+x1);
 		String at = scanConfig.getString("action_type");
 		if(at.equals("ping"))
 		{
@@ -103,7 +103,7 @@ public class PingPluginRuntime extends AutoReactiveContextPluginRuntime
 			Log.d(TAG, xyz.getImplementingClassname());
 			sendContextEvent(requestId, aci);
 			d = new Date();
-			//Log.d(TAG, "Send Context: "+d.getTime());
+			Log.d(TAG, "Send Context: "+d.getTime());
 			Log.d(TAG, id+" - time: "+(d.getTime()-x1)+ "ms");
 		}
 		context=this;
