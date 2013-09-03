@@ -33,7 +33,7 @@ import android.util.Log;
  * @author lukas
  *
  */
-public class PingContextInfo implements IContextInfo
+public class PingContextInfo implements IContextInfo, IPingContextInfo
 {
 
 	private final String TAG = "PINGPLUGIN";
