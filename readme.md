@@ -22,7 +22,7 @@ Add context support as follows:
 ```Java
 dynamix.addContextSupport(dynamixCallback, "org.ambientdynamix.contextplugins.context.info.sample.ping");
 ```
-    
+
 Request Context by creating a Bundle
 
 ```Java
