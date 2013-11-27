@@ -129,4 +129,10 @@ public class PingContextInfo implements IContextInfo, IPingContextInfo
 		return formats;
 	}
 
+	@Override
+	public String ping() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
